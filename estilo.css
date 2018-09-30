@@ -1,0 +1,86 @@
+body{
+    margin : 0;
+    padding: 0;
+}
+.container{
+    display : grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "s o o o"
+                         "p t t t";
+    grid-gap: 10px;        
+    width: 80%;
+    margin: 0 auto;  
+}
+header{
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1%;
+}
+h1{
+    text-align: center;
+    color: dodgerblue;
+}
+
+.seleccion{
+    display: grid;
+    grid-area: s;
+    grid-template-columns: repeat(3 1fr);
+}
+.texto{
+    display: grid;
+    grid-area: t;
+}
+.texto-original{
+    display: grid;
+    grid-area: o;
+}
+.proc{
+    display: grid;
+    grid-area: p;
+}
+#loading{
+    display: none;
+    color: darkblue;
+    font-size: 2.4em;
+    text-align: center;
+}
+input{
+    margin: 8px;
+}
+#valorRango{
+    width: 6%;
+    padding: 3px;
+}
+#caja{
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #ccc;
+    padding: 2px;
+}
+
+#img{
+
+    height: 150px;
+}
+
+#thumb-template{
+   margin: 1%;
+   position: absolute;
+   width: 100%;
+
+   text-align: center;
+   display: flex;
+}
+
+#thumb-template > img {
+   margin: auto;
+}
+
+
+#img-resized{
+    text-align: center;
+}
+
+#info p{
+    font-weight: bold;
+}

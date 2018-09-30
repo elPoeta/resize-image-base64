@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="resize.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+        <header>
+                <h1>Resize Image Base 64</h1>
+            </header>
+    <div class="container">
+        <section class="seleccion">
+                <fieldset>
+                        <legend>Seleccionar IMG</legend>
+                        <input id="archivoinput" type="file" accept="image/*" />
+                        <input type="range" id="maxWidth" name="maxWidth" min="50" max="800" value="50" step="50" />
+                            <input type="text" id="valorRango" value="50" readonly />
+                            <button id="redimensionar">Resize</button>
+                        <div id="caja">
+                            <p>O arrastre y suelte la imagen aquí</p>
+                            <figure id="thumb">
+                                <!-- <img id="img" > -->
+                            </figure>
+                            
+                        </div>
+                    </fieldset>
+            
+        </section>
+        <section class="texto">
+                <fieldset>
+                        <legend>Texto IMG Resized</legend>
+                        <textarea name="base64" id="txtbase64" cols="89" rows="16"></textarea>
+                    </fieldset>         
+            </section>
+            <section class="texto-original">
+                    <fieldset>
+                            <legend>Texto IMG Original</legend>
+                            <textarea name="txtbase64" id="txtoriginal" cols="89" rows="16"></textarea>
+                        </fieldset>         
+                </section>
+         <section class="proc">
+                <fieldset>
+                        <legend>File Info</legend>
+                        <div id="info">
+                              
+                                <p>Original Size: <span id="osize">0</span> bytes</p>
+                                <p>Original Caracteres: <span id="ochar">0</span></p>
+                                    <hr>
+                                <p>Resize Size: <span id="rsize">0</span> bytes</p>
+                                <p>Resize Caracteres: <span id="rchar">0</span></p>
+                             
+                        </div>
+                    </fieldset>
+         </section>
+    </div>
+
+   
+    <figure id="thumb-template">
+        <!-- <img id="img" height="150"> -->
+    </figure>
+
+
+</body>
+
+</html>
