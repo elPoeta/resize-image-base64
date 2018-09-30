@@ -1,4 +1,3 @@
-const ancho = 800;
 let imagen;
 const archivoInput = document.querySelector('#archivoinput');
 const caja = document.querySelector('#caja');
@@ -15,22 +14,22 @@ caja.addEventListener("drop", e =>{
     e.preventDefault();
     imagen = e.dataTransfer.files[0]; 
     if(imagen){
-        resize(imagen,ancho); 
+        resize(imagen); 
     }
 });
 
 archivoInput.addEventListener('change', e =>{
     imagen = e.target.files[0];
     if(imagen){
-        resize(imagen,ancho); 
+        resize(imagen); 
     }
 });
 
 
-async function resize(imagen,ancho){
+async function resize(imagen){
     const config = {
         img: imagen,
-        maxSize: ancho
+        maxSize: 600
     };
     try{
       const resizeImg = await resizeImage(config);   
@@ -73,7 +72,7 @@ let resizeImage = async (settings) => {
 
     return new Promise(function (ok, error) {
         if (!file.type.match(/^image\//)) {
-            error(new Error("Not an image"));
+            error(new Error("No es una imagen"));
             return;
         }
         fileReader.onload = function (e) {
