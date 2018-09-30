@@ -21,6 +21,12 @@ caja.addEventListener("dragover", e => {
 caja.addEventListener("drop", e =>{
     e.preventDefault();
     archivoImg = e.dataTransfer.files[0]; 
+    document.querySelector('#txtoriginal').innerHTML = '';
+    document.querySelector('#txtbase64').innerHTML = '';
+    document.querySelector('#osize').innerHTML = '0';
+    document.querySelector('#ochar').innerHTML = '0';
+    document.querySelector('#rsize').innerHTML = '0';
+    document.querySelector('#rchar').innerHTML = '0';
     convertir(archivoImg);
 });
 
@@ -32,6 +38,12 @@ maxWidth.addEventListener('change', e =>{
 
 archivoInput.addEventListener('change', e =>{
     archivoImg = e.target.files[0];
+    document.querySelector('#txtoriginal').innerHTML = '';
+    document.querySelector('#txtbase64').innerHTML = '';
+    document.querySelector('#osize').innerHTML = '0';
+    document.querySelector('#ochar').innerHTML = '0';
+    document.querySelector('#rsize').innerHTML = '0';
+    document.querySelector('#rchar').innerHTML = '0';
     convertir(archivoImg);
 });
 
