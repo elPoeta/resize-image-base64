@@ -49,7 +49,7 @@ let resizeImage = async (settings) => {
     let image = new Image();
     let canvas = document.createElement('canvas');
 
-    let resize = function () {
+    let resize =  () => {
         let width = image.width;
         let height = image.height;
         if (width > height) {
